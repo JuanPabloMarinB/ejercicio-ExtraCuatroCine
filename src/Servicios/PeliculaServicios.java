@@ -14,9 +14,11 @@ public class PeliculaServicios {
 
         System.out.println("Ingresa el nombre de la película");
         p1.setTitulo(sc.next());
+        p1.setTitulo(p1.getTitulo().substring(0,1).toUpperCase() + p1.getTitulo().substring(1).toLowerCase());
 
         System.out.println("Ingresa el nombre del director de " + p1.getTitulo());
         p1.setDirector(sc.next());
+        p1.setDirector(p1.getDirector().substring(0,1).toUpperCase() + p1.getDirector().substring(1).toLowerCase());
 
         System.out.println("Ingresa la duración (en horas) de " + p1.getTitulo());
         p1.setDuracion(sc.nextInt());
@@ -48,9 +50,11 @@ public class PeliculaServicios {
 
         System.out.println("Ingresa el nombre de la nueva película");
         p1.setTitulo(sc.next());
+        p1.setTitulo(p1.getTitulo().substring(0,1).toUpperCase() + p1.getTitulo().substring(1).toLowerCase());
 
         System.out.println("Ingresa el nombre del director de " + p1.getTitulo());
         p1.setDirector(sc.next());
+        p1.setDirector(p1.getDirector().substring(0,1).toUpperCase() + p1.getDirector().substring(1).toLowerCase());
 
         System.out.println("Ingresa la duración (en horas) de " + p1.getTitulo());
         p1.setDuracion(sc.nextInt());
@@ -85,10 +89,10 @@ public class PeliculaServicios {
 
         arrayPeliculas.sort(Pelicula.ordenarDuracionesMayorMenor);
         for (Pelicula objeto : arrayPeliculas) {
-            if (p1.getDuracion() == 1) {
-                System.out.println("Duración: " + objeto.getDuracion() + " hora. Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector());
+            if (objeto.getDuracion() == 1) {
+                System.out.println("Duración: " + objeto.getDuracion() + " hora. Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector());
             } else {
-                System.out.println("Duración: " + objeto.getDuracion() + " horas. Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector());
+                System.out.println("Duración: " + objeto.getDuracion() + " horas. Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector());
             }
         }
 
@@ -100,10 +104,10 @@ public class PeliculaServicios {
 
         arrayPeliculas.sort(Pelicula.ordenarDuracionesMenorMayor);
         for (Pelicula objeto : arrayPeliculas) {
-            if (p1.getDuracion() == 1) {
-                System.out.println("Duración: " + objeto.getDuracion() + " hora. Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector());
+            if (objeto.getDuracion() == 1) {
+                System.out.println("Duración: " + objeto.getDuracion() + " hora. Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector());
             } else {
-                System.out.println("Duración: " + objeto.getDuracion() + " horas. Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector());
+                System.out.println("Duración: " + objeto.getDuracion() + " horas. Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector());
             }
         }
 
@@ -115,10 +119,10 @@ public class PeliculaServicios {
 
         arrayPeliculas.sort(Pelicula.ordenarTitulos);
         for (Pelicula objeto : arrayPeliculas) {
-            if (p1.getDuracion() == 1) {
-                System.out.println(" Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector() + " Duración: " + objeto.getDuracion() + " hora");
+            if (objeto.getDuracion() == 1) {
+                System.out.println("Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector() + ". Duración: " + objeto.getDuracion() + " hora.");
             } else {
-                System.out.println(" Título: " + objeto.getTitulo() + " Director: " + objeto.getDirector() + " Duración: " + objeto.getDuracion() + " horas");
+                System.out.println("Título: " + objeto.getTitulo() + ". Director: " + objeto.getDirector() + ". Duración: " + objeto.getDuracion() + " horas.");
             }
         }
 
@@ -129,10 +133,10 @@ public class PeliculaServicios {
 
         arrayPeliculas.sort(Pelicula.ordenarDirectores);
         for (Pelicula objeto : arrayPeliculas) {
-            if (p1.getDuracion() == 1) {
-                System.out.println("Director: " + objeto.getDirector() + " Título: " + objeto.getTitulo() + " Duración: " + objeto.getDuracion() + " hora");
+            if (objeto.getDuracion() == 1) {
+                System.out.println("Director: " + objeto.getDirector() + ". Título: " + objeto.getTitulo() + ". Duración: " + objeto.getDuracion() + " hora.");
             } else {
-                System.out.println("Director: " + objeto.getDirector() + " Título: " + objeto.getTitulo() + " Duración: " + objeto.getDuracion() + " horas");
+                System.out.println("Director: " + objeto.getDirector() + ". Título: " + objeto.getTitulo() + ". Duración: " + objeto.getDuracion() + " horas.");
             }
         }
     }
